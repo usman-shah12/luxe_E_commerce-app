@@ -139,27 +139,38 @@ final controller = Get.isRegistered<ProfileController>()
                     ]),
                     const SizedBox(height: 20),
                     // Logout
-                    GestureDetector(
-                      onTap: controller.logout,
-                      child: Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        decoration: BoxDecoration(
-                          color: AppColors.error.withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(14),
-                          border: Border.all(color: AppColors.error.withOpacity(0.3), width: 0.5),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Icon(Icons.logout, color: AppColors.error, size: 20),
-                            const SizedBox(width: 10),
-                            Text('Sign Out', style: AppTextStyles.labelLarge.copyWith(color: AppColors.error)),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 32),
+                    Obx(() => GestureDetector(
+      onTap: controller.isLoading.value ? null : controller.logout,
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        decoration: BoxDecoration(
+          color: AppColors.bgSurface,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.borderColor),
+        ),
+        child: controller.isLoading.value
+            ? const Center(
+                child: SizedBox(
+                  height: 20,
+                  width: 20,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.logout, color: AppColors.error, size: 20),
+                  const SizedBox(width: 10),
+                  Text(
+                    'Sign Out',
+                    style: AppTextStyles.labelLarge.copyWith(color: AppColors.error),
+                  ),
+                ],
+              ),
+      ),
+    ))
+               
                   ],
                 ),
               ),
