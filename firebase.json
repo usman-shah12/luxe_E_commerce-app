@@ -1,1 +1,33 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"luxe-online-store","appId":"1:860506144525:android:08de3eef5cbe0be957fa44","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"luxe-online-store","configurations":{"android":"1:860506144525:android:08de3eef5cbe0be957fa44","ios":"1:860506144525:ios:49c7320cd7f00bba57fa44","macos":"1:860506144525:ios:49c7320cd7f00bba57fa44","web":"1:860506144525:web:e581707a7e7a77fd57fa44","windows":"1:860506144525:web:e69cf4a3e6e915df57fa44"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "luxe-online-store",
+          "appId": "1:860506144525:android:08de3eef5cbe0be957fa44",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "luxe-online-store",
+          "configurations": {
+            "android": "1:860506144525:android:08de3eef5cbe0be957fa44",
+            "ios": "1:860506144525:ios:49c7320cd7f00bba57fa44",
+            "macos": "1:860506144525:ios:49c7320cd7f00bba57fa44",
+            "web": "1:860506144525:web:e581707a7e7a77fd57fa44",
+            "windows": "1:860506144525:web:e69cf4a3e6e915df57fa44"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
